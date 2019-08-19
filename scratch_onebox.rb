@@ -1,3 +1,8 @@
+# name: scratch-onebox-plugin
+# about: A super simple plugin to show Scratch projects
+# version: 0.0.1
+# authors: Awesome Plugin Developer
+
 Onebox = Onebox
 
 module Onebox
