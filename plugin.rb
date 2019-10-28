@@ -1,7 +1,8 @@
-# name: scratch-onebox-plugin
-# about: A super simple plugin to show Scratch projects
-# version: 0.0.1
-# authors: Awesome Plugin Developer
+# name: Scratch Onebox
+# about: Simple Scratch project display box for Discourse
+# version: 0.1
+# authors: tarmelop
+# url: https://github.com/tarmelop/discourse-scratch-onebox
 
 Onebox = Onebox
 
@@ -42,7 +43,7 @@ module Onebox
       def to_html_iframe_only
 
         <<-HTML
-        <h2><a href="#{data[:url]}">#{data[:title]} (by #{data[:username]})</a></h2>
+        <h3><a href="#{data[:url]}">#{data[:title]} (by #{data[:username]})</a></h3>
         <iframe src="https://scratch.mit.edu/projects/#{data[:project_id]}/embed" 
            allowtransparency="true" width="485" height="402" 
            frameborder="0" scrolling="no" allowfullscreen>
@@ -53,7 +54,7 @@ module Onebox
       def to_html_static
 
         <<-HTML
-        <h2><a href="#{data[:url]}" target="_blank">#{data[:title]} (by #{data[:username]})</a></h2>
+        <h3><a href="#{data[:url]}" target="_blank">#{data[:title]} (by #{data[:username]})</a></h3>
         <a href="#{data[:url]}" target="_blank"><img src="#{data[:image_url]}"/></a>
         HTML
 
